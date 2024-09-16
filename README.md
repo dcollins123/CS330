@@ -20,4 +20,3 @@ How do computational graphics and visualizations give you new knowledge and skil
    I once heard that a mathematicians job is to find better ways to solve problems; I think the same applies to a computer scientist.
 How do computational graphics and visualizations give you new knowledge and skills that can be applied in your future professional pathway?
   Being able to create something so you can provide the information visually will allow me to be more effective, and this is a powerful tool in any industry.
-
