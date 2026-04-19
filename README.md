@@ -1,22 +1,43 @@
-# CS330
-Graphics
-How do I approach designing software?
-  I approach designing software by trying to understand the requirements, then breaking it down to smaller tasks; from there I write my pseudocode. 
-What new design skills has your work on the project helped you to craft?
-  As the scene grew in size and complexity, I saw the need for modularity. This helped clean up the code, made it easier to debug and maintain, and helped speed up the rendering time. 
-What design process did you follow for your project work?
-  I started by listing each object I wanted to render, then wrote pseudocode for each one, then continually refactored the code as the project went on. 
-How could tactics from your design approach be applied in future work?
-  Breaking down tasks and working to really understand the requirements can be applied to almost any project in the future. 
-How do I approach developing programs?
-  By writing smaller functional code with print statements, I'm able to test each section, ensuring proper functionally before moving on the next step. 
-What new development strategies did you use while working on your 3D scene?
-  I didn't focus on getting each object perfect before moving on to the next, instead I added all the objects, focusing on position, and once they were in place, I worked on fine tuning each. 
-How did iteration factor into your development?
-  Iteration played a huge role when it came time to light the scene; every time I made a change to the lighting settings, I would render the scene and check it. Going back and forth allowed me to ensure the lighting was exactly what I wanted without creating unintended consequences. 
-How has your approach to developing code evolved throughout the milestones, which led you to the project’s completion?
-  I started taking look to see how each new milestone element would affect my scene before inserting new code, which helped me avoid backtracking and having to make large changes to the scene/code. 
-How do computational graphics and visualizations give you new knowledge and skills that can be applied in your future educational pathway?
-   I once heard that a mathematicians job is to find better ways to solve problems; I think the same applies to a computer scientist.
-How do computational graphics and visualizations give you new knowledge and skills that can be applied in your future professional pathway?
-  Being able to create something so you can provide the information visually will allow me to be more effective, and this is a powerful tool in any industry. 
+# CS 330 — 3D Scene
+
+**Category:** Software Design and Engineering
+**Original course:** CS 330 — Computational Graphics and Visualization (September 2024)
+
+## What the original artifact is
+
+A C++/OpenGL desktop program that renders a 3D castle scene. It uses GLSL shaders, texture mapping (marble, copper, gold, sky), multiple light sources, and keyboard/mouse camera controls. Around 2,700 lines across `SceneManager.cpp`, `ViewManager.cpp`, `MainCode.cpp`, and shader files. Runs on Windows only and needs Visual Studio plus the OpenGL/GLFW/GLEW stack to build.
+
+## Why I chose it
+
+The scene itself was fine, but the delivery story was bad. You could only see it by cloning the repo, installing a Windows toolchain, and building it yourself. That's not a portfolio piece, that's a homework screenshot. Porting it to the web makes it something anyone can open.
+
+## What I enhanced
+
+Ported the entire scene from C++/OpenGL to **Three.js/WebGL** in a single self-contained HTML file. No build step, no install, just open it in a browser.
+
+- Cylinders, spires, planes, and textures all rebuilt in Three.js using `CylinderGeometry`, `ConeGeometry`, `PlaneGeometry`, and procedural canvas textures for marble, copper, gold, and sky (keeps the file self-contained — no external image hosting)
+- Broke the monolithic `SceneManager` into smaller functions for geometry creation, texture generation, lighting setup, and the render loop
+- Added **OrbitControls** for camera movement and a **dat.GUI** panel for live lighting adjustments
+- Shadow mapping and tone mapping for a less flat-looking scene
+- Responsive canvas that resizes with the browser window
+
+## Course outcomes this hits
+
+- **Outcome 2 (professional communications):** a visual deliverable anyone can open and interact with, plus this narrative explaining what changed and why
+- **Outcome 3 (algorithmic principles and trade-offs):** choosing WebGL over native OpenGL trades some raw performance for near-universal accessibility, which for a portfolio piece is the right call
+- **Outcome 4 (well-founded, innovative tools):** Three.js is the de facto standard for 3D on the web, and using it shows I can pick up and ship with a current framework
+
+## Files
+
+- `README.md` — this narrative
+- `enhanced_scene_Daniel_Collins.html` — the Three.js port (open in a browser)
+- `CS499_Milestone_Two_Daniel_Collins.zip` — full milestone submission with enhanced artifact and `originals/` folder containing the unmodified C++ source
+- Original C++ source files and prior milestone zips are preserved for reference
+
+## How to view it
+
+Just open `enhanced_scene_Daniel_Collins.html` in any modern browser. No server needed.
+
+---
+
+Part of my CS 499 ePortfolio — [dcollins123.github.io](https://dcollins123.github.io)
