@@ -1,5 +1,5 @@
 # CS 330 — 3D Scene
-
+ 
 **Category:** Software Design and Engineering
 **Original course:** CS 330 — Computational Graphics and Visualization (September 2024)
 
